@@ -115,6 +115,3 @@ local.properties
 .cache-main
 .scala_dependencies
 .worksheet
-
-/quickstart/quickstart.iml
-/spring-security-tutorial.iml
