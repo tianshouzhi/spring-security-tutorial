@@ -9,12 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>quickstart</artifactId>
+    <artifactId>form-login</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>quickstart-based-xml</module>
-        <module>quickstart-based-java</module>
-        <module>quickstart-based-springmvc</module>
+        <module>form-login-java</module>
     </modules>
 
 

@@ -6,12 +6,19 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>quickstart-based-xml</artifactId>
+    <artifactId>quickstart-based-springmvc</artifactId>
     <packaging>war</packaging>
-    <name>quickstart-based-xml Maven Webapp</name>
+    <name>quickstart-based-springmvc Maven Webapp</name>
     <url>http://maven.apache.org</url>
-
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     <build>
-        <finalName>quickstart-based-xml</finalName>
+        <finalName>quickstart-based-springmvc</finalName>
     </build>
 </project>
