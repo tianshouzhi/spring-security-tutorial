@@ -3,7 +3,7 @@ angular.module('AngularApp')
         $stateProvider.state("home",{
             url:"/",
             controller:"HomeController",
-            templateUrl:"home/home.html"
+            templateUrl:"app/home/home.html"
         })
     }).controller("HomeController",function ($scope) {
 

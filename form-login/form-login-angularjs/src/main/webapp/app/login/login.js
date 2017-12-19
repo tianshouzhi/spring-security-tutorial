@@ -3,7 +3,7 @@ angular.module('AngularApp')
         $stateProvider
             .state('login', {
                 url: '/login',
-                templateUrl: '/login/login.html',
+                templateUrl: 'app/login/login.html',
                 controller: 'LoginController'
             });
     });
