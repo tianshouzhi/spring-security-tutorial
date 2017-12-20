@@ -14,18 +14,8 @@
     <modules>
         <module>form-login-java</module>
         <module>form-login-angularjs</module>
+        <module>form-login-xml</module>
+        <module>form-login-springboot</module>
     </modules>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>5.0.0.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-config</artifactId>
-            <version>5.0.0.RELEASE</version>
-        </dependency>
-    </dependencies>
 </project>
