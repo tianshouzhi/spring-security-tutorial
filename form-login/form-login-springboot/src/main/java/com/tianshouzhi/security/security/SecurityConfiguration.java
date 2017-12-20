@@ -21,20 +21,22 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/{bower_components,app}/**");
+        web
+                .ignoring()
+                .antMatchers("/bower_components/**")
+                .antMatchers("/app/**")
+                .antMatchers("/index.html")
+                .antMatchers("/");
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                     .antMatchers("/index.html").permitAll()
-                     .anyRequest().authenticated()
-                .and()
-                   .csrf().disable()
+                    .anyRequest().authenticated()
+                    .and()
+                    .csrf().disable()
                 .formLogin()
-                    //不需要指定loginPage
-                    //.loginPage("/login.html")
                     .loginProcessingUrl("/login")
                     .passwordParameter("password")
                     .usernameParameter("username")
@@ -42,6 +44,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .successHandler(new AjaxAuthenticationSuccessHandler())
                     //通过failureHandler取代failureForwardUrl方法
                     .failureHandler(new AjaxAuthenticationFailureHandler())
-                    .permitAll();
+                .permitAll();
     }
 }
