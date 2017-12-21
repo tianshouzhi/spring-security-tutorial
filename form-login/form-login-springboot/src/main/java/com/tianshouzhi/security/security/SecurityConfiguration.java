@@ -12,6 +12,10 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  */
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private Http401UnauthorizedEntryPoint authenticationEntryPoint;
+
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
@@ -33,9 +37,9 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                    .anyRequest().authenticated()
-                    .and()
-                    .csrf().disable()
+                   .anyRequest().authenticated()
+                .and()
+                  .csrf().disable()
                 .formLogin()
                     .loginProcessingUrl("/login")
                     .passwordParameter("password")
@@ -44,6 +48,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .successHandler(new AjaxAuthenticationSuccessHandler())
                     //通过failureHandler取代failureForwardUrl方法
                     .failureHandler(new AjaxAuthenticationFailureHandler())
-                .permitAll();
+                    .permitAll()
+                .and()
+                    .exceptionHandling()
+                    .authenticationEntryPoint(authenticationEntryPoint);
+
     }
 }
