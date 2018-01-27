@@ -9,13 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>quickstart</artifactId>
+    <artifactId>jdbc-authentication</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>quickstart-based-xml</module>
-        <module>quickstart-based-java</module>
-        <module>quickstart-based-springmvc</module>
-        <module>multi-httpsecurity</module>
+        <module>jdbc-authentication-based-java</module>
     </modules>
 
 
