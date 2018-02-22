@@ -1,23 +1,21 @@
 package com.tianshouzhi.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.builders.WebSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.annotation.authentication.builders.*;
+import org.springframework.security.config.annotation.web.builders.*;
+import org.springframework.security.config.annotation.web.configuration.*;
 import org.springframework.security.core.userdetails.User;
 
-/**
- * Created by tianshouzhi on 2017/12/18.
- */
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth
-                .inMemoryAuthentication()
-                .withUser(User.withDefaultPasswordEncoder().username("tianshouzhi").password("tianshouzhi123").roles("USER"));
+        auth.inMemoryAuthentication()
+                .withUser(
+                        User.withDefaultPasswordEncoder()
+                                .username("tianshouzhi")
+                                .password("tianshouzhi123")
+                                .roles("USER"));
     }
 
     @Override
@@ -30,6 +28,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                      .antMatchers("/index.html").permitAll()
+
                      .anyRequest().authenticated()
                 .and()
                    .csrf().disable()
