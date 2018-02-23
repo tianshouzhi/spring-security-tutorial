@@ -14,8 +14,6 @@
     <modules>
         <module>quickstart-based-xml</module>
         <module>quickstart-based-java</module>
-        <module>quickstart-based-springmvc</module>
-        <module>multi-httpsecurity</module>
     </modules>
 
 

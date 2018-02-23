@@ -8,7 +8,7 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>form-login-angularjs</artifactId>
     <packaging>war</packaging>
-    <name>form-login-ajax Maven Webapp</name>
+    <name>form-login-ajax</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>

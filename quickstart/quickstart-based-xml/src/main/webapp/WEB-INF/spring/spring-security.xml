@@ -1,57 +1,14 @@
 <b:beans xmlns="http://www.springframework.org/schema/security"
-		 xmlns:b="http://www.springframework.org/schema/beans"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
-	<http >
-
-	</http>
-	<authentication-manager/>
-	<content-type-options/>
-	<content-security-policy/>
-	<debug/>
-	<http-firewall />
-	<xss-protection/>
-	<cors></cors>
-	<csrf></csrf>
-	<attribute-exchange>
-		<openid-attribute name="" type=""/>
-	</attribute-exchange>
-	<frame-options></frame-options>
-	<filter-chain-map>
-		<filter-chain filters=""/>
-	</filter-chain-map>
-	<filter-chain filters=""></filter-chain>
-	<cache-control></cache-control>
-	<websocket-message-broker></websocket-message-broker>
-	<openid-attribute name="" type=""></openid-attribute>
-	<headers></headers>
-	<filter-security-metadata-source>
-		<intercept-url/>
-	</filter-security-metadata-source>
-	<hpkp>
-		<pins>
-			<pin></pin>
-		</pins>
-	</hpkp>
-	<hsts></hsts>
-	<jdbc-user-service data-source-ref=""></jdbc-user-service>
-	<ldap-server></ldap-server>
-	<intercept-methods>
-		<protect method="com" access=""/>
-	</intercept-methods>
-	<jee mappable-roles=""></jee>
-	<pins>
-		<pin></pin>
-	</pins>
-	<pin></pin>
-	<request-cache ref=""></request-cache>
-	<referrer-policy></referrer-policy>
-	<cache-control></cache-control>
-	<method-security-metadata-source>
-		<protect method="getAllConfigAttributes" access="ROLE_USER"/>
-	</method-security-metadata-source>
-		<user-service>
-		<user name="tianshouzhi" password="{noop}tianshouzhi123" authorities="ROLE_USER" />
-	</user-service>
+         xmlns:b="http://www.springframework.org/schema/beans"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                  http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+    <!--使用spring-security的http的默认配置-->
+    <http/>
+    <!--创建一个用户-->
+    <user-service>
+        <user name="tianshouzhi"
+              password="{noop}tianshouzhi123"
+              authorities="ROLE_USER"/>
+    </user-service>
 </b:beans>

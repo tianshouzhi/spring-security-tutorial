@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class UserController {
+    public UserController() {
+        System.out.println("UserController.UserController");
+    }
+
     @GetMapping("/user")
     public Object user(){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
