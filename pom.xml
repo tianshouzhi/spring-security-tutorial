@@ -12,6 +12,7 @@
         <module>quickstart</module>
         <module>form-login</module>
         <module>jdbc-auth</module>
+        <module>integration</module>
     </modules>
 
     <dependencies>

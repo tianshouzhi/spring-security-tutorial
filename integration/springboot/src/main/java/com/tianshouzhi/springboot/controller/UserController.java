@@ -1,4 +1,4 @@
-package com.tianshouzhi.security.controller;
+package com.tianshouzhi.springboot.controller;
 
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;

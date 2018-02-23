@@ -12,8 +12,8 @@
     <artifactId>quickstart</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>quickstart-based-xml</module>
-        <module>quickstart-based-java</module>
+        <module>quickstart-xml</module>
+        <module>quickstart-java</module>
     </modules>
 
 

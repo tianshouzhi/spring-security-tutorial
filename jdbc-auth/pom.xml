@@ -12,7 +12,7 @@
     <artifactId>jdbc-auth</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>jdbc-auth-based-java</module>
+        <module>jdbc-auth-java</module>
     </modules>
 
 

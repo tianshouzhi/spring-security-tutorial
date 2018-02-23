@@ -9,12 +9,13 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>form-login</artifactId>
+    <artifactId>integration</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>form-login-java</module>
-        <module>form-login-angularjs</module>
-        <module>form-login-xml</module>
+        <module>springboot</module>
+        <module>springmvc</module>
+        <module>springdata</module>
     </modules>
+
 
 </project>

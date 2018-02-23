@@ -1,4 +1,4 @@
-package com.tianshouzhi.security.security;
+package com.tianshouzhi.springboot.security;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
