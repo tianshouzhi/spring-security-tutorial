@@ -13,8 +13,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>springboot</module>
-        <module>springmvc</module>
         <module>springdata</module>
+        <module>springmvc</module>
     </modules>
 
 
