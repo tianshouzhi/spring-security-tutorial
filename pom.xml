@@ -14,6 +14,7 @@
         <module>jdbc-auth</module>
         <module>integration</module>
         <module>csrf</module>
+        <module>oauth2</module>
     </modules>
 
     <dependencies>
